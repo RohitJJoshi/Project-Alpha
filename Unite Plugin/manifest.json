@@ -1,0 +1,29 @@
+{
+  "name": "Unite Connector for GitHub",
+  "version": "0.0.1",
+  "manifest_version": 2,
+  "description": "This browser plugin extends github UI functionality to work with Unite",
+  "homepage_url": "https://unite.com",
+  "content_scripts": [
+    {
+      "matches": [
+        "https://github.com/*"
+      ],
+      "js": [
+        "inject.js"
+      ],
+      "css": [
+        "unite.css"
+      ],
+      "run_at": "document_end"
+    }
+  ],
+  "browser_action": {
+    "default_title": "Inject!"
+  },
+  "permissions": [
+    "https://*/*",
+    "http://*/*",
+    "tabs"
+  ]
+}
